@@ -1,3 +1,8 @@
+use rpcamrs::rpcamrs::*;
+
 fn main() {
-    println!("Hello, world!");
+    println!(
+        "{:?}",
+        single_capture("test.jpg", None, None, None).unwrap()
+    );
 }
