@@ -3,6 +3,7 @@ sudo apt-get install -y libv4l-dev
 sudo apt-get install v4l-utils
 sudo apt-get install gettext
 sudo apt-get install v4l2loopback-dkms
+sudo apt install -y libclang-dev
  */
 
 use rpcamrs::rpcamrs::*;
@@ -16,9 +17,6 @@ fn main() {
 
     camera
         .start(&Config {
-            interval: (1, 30), // 30 fps.
-            resolution: (1280, 720),
-            format: b"MJPG",
             ..Default::default()
         })
         .unwrap();
