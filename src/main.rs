@@ -17,6 +17,9 @@ fn main() {
 
     camera
         .start(&Config {
+            interval: (1, 30), // 30 fps.
+            resolution: (1280, 720),
+            format: b"MJPG",
             ..Default::default()
         })
         .unwrap();
