@@ -1,5 +1,6 @@
 /*
 sudo apt-get install -y libv4l-dev
+sudo apt-get install v4l-utils
  */
 
 use rpcamrs::rpcamrs::*;
@@ -9,7 +10,7 @@ use std::io::Write;
 fn main() {
     use rscam::{Camera, Config};
 
-    let mut camera = Camera::new("/dev/video5").unwrap();
+    let mut camera = Camera::new("/dev/video0").unwrap();
 
     camera
         .start(&Config {
