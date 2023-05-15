@@ -9,7 +9,7 @@ use std::io::Write;
 fn main() {
     use rscam::{Camera, Config};
 
-    let mut camera = Camera::new("/dev/video0").unwrap();
+    let mut camera = Camera::new("/dev/video5").unwrap();
 
     camera
         .start(&Config {
