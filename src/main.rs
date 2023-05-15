@@ -18,7 +18,7 @@ fn main() {
         .start(&Config {
             interval: (1, 30), // 30 fps.
             resolution: (1280, 720),
-            format: b"MJPEG",
+            format: b"MJPG",
             ..Default::default()
         })
         .unwrap();
